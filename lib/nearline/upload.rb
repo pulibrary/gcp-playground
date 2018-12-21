@@ -1,4 +1,3 @@
-# Imports the Google Cloud client library
 require "google/cloud/storage"
 
 project_id = "pulibrary-figgy-storage-1"
