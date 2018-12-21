@@ -10,6 +10,7 @@ experimentation with nearline storage for preservation
    ```
    gcloud compute os-login ssh-keys add --key-file ~/.ssh/id_rsa.pub --ttl 0
    ```
+1. When logging in to VMs, the user name is `netid_princeton_edu`
 
 ## Create an API key
 https://cloud.google.com/storage/docs/reference/libraries#client-libraries-install-ruby
