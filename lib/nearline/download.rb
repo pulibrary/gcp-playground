@@ -4,7 +4,8 @@ download_dir = ENV['DOWNLOAD_DIRECTORY']
 project_id = "pulibrary-figgy-storage-1"
 bucket_name = "pulibrary-figgy-preservation-1"
 
-storage = Google::Cloud::Storage.new project_id: project_id
+# Timeout to 1 day
+storage = Google::Cloud::Storage.new project_id: project_id, timeout: 86400
 bucket = storage.bucket bucket_name
 
 def download_bags(download_dir, bucket)

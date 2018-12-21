@@ -18,7 +18,8 @@ def upload_bags(archived_bag_path, bucket)
   end
 end
 
-storage = Google::Cloud::Storage.new project_id: project_id
+# Timeout to 1 day
+storage = Google::Cloud::Storage.new project_id: project_id, timeout: 86400
 bucket = storage.bucket bucket_name
 archived_bag_path = ENV['BAG_DIRECTORY']
 
