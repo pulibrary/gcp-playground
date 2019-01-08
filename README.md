@@ -19,5 +19,11 @@ download it to your machine somewhere
 ## Upload bags to Nearline
 On a server with access to the bags directory
 1 clone this repo and bundle install
-1 start an irb console
-`GOOGLE_APPLICATION_CREDENTIALS=path/to/key.json BAG_DIRECTORY=path/to/bags ruby lib/nearline/upload.rb`
+1 run the upload script
+`GOOGLE_APPLICATION_CREDENTIALS=path/to/key.json BAG_DIRECTORY=path/to/bags bundle exec ruby lib/nearline/upload.rb`
+
+## Download bags from Nearline
+On a server with access to the bags directory
+1 clone this repo and bundle install
+1 run the download script
+`GOOGLE_APPLICATION_CREDENTIALS=path/to/key.json DOWNLOAD_DIRECTORY=path/to/bags bundle exec ruby lib/nearline/download.rb`
