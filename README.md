@@ -27,3 +27,8 @@ On a server with access to the bags directory
 1 clone this repo and bundle install
 1 run the download script
 `GOOGLE_APPLICATION_CREDENTIALS=path/to/key.json DOWNLOAD_DIRECTORY=path/to/bags bundle exec ruby lib/nearline/download.rb`
+
+## Google Cloud Storage API
+
+http://googleapis.github.io/google-cloud-ruby/docs/google-cloud-storage/latest/
+

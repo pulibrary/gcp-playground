@@ -13,7 +13,7 @@ def download_bags(download_dir, bucket)
     path = File.join(download_dir, f.name)
     f.download path
     md5 = Digest::MD5.file(path).base64digest
-    if f.md5_hash == md5
+    if f.md5 == md5
       puts "Yay! md5 matched on #{path}"
     else
       puts "Boo! md5 did not match for #{path}"
