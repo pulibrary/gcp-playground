@@ -10,8 +10,10 @@ bucket = storage.bucket bucket_name
 
 def download_bags(download_dir, bucket)
   bucket.files.each do |f|
+    puts "Begin download: #{Time.now}"
     path = File.join(download_dir, f.name)
     f.download path
+    puts "Finish download: #{Time.now}"
     md5 = Digest::MD5.file(path).base64digest
     if f.md5 == md5
       puts "Yay! md5 matched on #{path}"
